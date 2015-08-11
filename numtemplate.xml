@@ -1,0 +1,11 @@
+<include>
+	<gateway name="%SIP_LOGIN%">
+		<param name="username" value="%SIP_LOGIN%"/>
+		<param name="realm" value="voip.eutelia.it"/>
+		<param name="password" value="%SIP_PASSWORD%"/>
+		<param name="expire-seconds" value="180"/>
+		<param name="register" value="true"/>
+		<param name="retry-seconds" value="30"/>
+	</gateway>
+</include>
+                

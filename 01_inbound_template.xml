@@ -1,0 +1,9 @@
+<include>
+  <extension name="call_system">
+    <condition field="destination_number" expression="^(%SIP_LOGIN%)$"/>
+    <condition field="caller_id_number" expression="^(%WHITELISTED_NUMBERS%)$">
+      <action application="system" data="%HTTP_URL%"/>
+      <action application="hangup" data="USER_BUSY"/>
+    </condition>
+  </extension>
+</include>
