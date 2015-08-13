@@ -36,8 +36,8 @@ num2:
    - HTTP_URL=http://192.168.1.2
 ```
 
-On this 2 examples an HTTP request to 192.168.1.1 is triggered everytime a whitelisted caller calls sipaccount1 and 192.168.1.2 whenever sipaccount2 is called.
-Clouditalia offers sipaccounts related to geographical phone numbers (mostly italian) at <a href="www.clouditaliaorchestra.com">www.clouditaliaorchestra.com</a>.
+On this 2 examples an HTTP request to 192.168.1.1 is triggered everytime a whitelisted caller calls sipaccount1 and to 192.168.1.2 whenever sipaccount2 is called.
+Clouditalia offers free sip accounts related to geographical phone numbers (mostly italian) at <a href="www.clouditaliaorchestra.com">www.clouditaliaorchestra.com</a>.
 After a call has been received a busy signal is sent back to the caller so you won't be charged from your telco company.
 I use this process for home automation purposes, the most common possible situation is a raspberry pi connected to some appliance that triggers his GPIOs for every incoming HTTP request.
 ClouditaliaCall2HTTPConverter extens this feature so you can control your home appliances directly from your cellphone with a simple voicecall.
