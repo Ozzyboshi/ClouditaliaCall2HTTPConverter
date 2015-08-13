@@ -3,10 +3,15 @@ Docker image based on Freeswitch on top of Debian Wheezy to convert inbound call
 
 Introduction
 ------------
-ClouditaliaCall2HTTPConverter lets you send regular http request anywhere when an incoming call occurs.
-ClouditaliaCall2HTTPConverter works only with Clouditalia sip accounts, you can get some for free at <a href="http://www.clouditaliaorchestra.com">http://www.clouditaliaorchestra.com</a>.
+ClouditaliaCall2HTTPConverter lets you send an HTTP request anywhere whenever a phone call is received.
+ClouditaliaCall2HTTPConverter works with Clouditalia sip accounts only, you can get some for free at [Clouditalia Orchestra](http://www.clouditaliaorchestra.com).
+
+Clouditalia offers free sip accounts related to italian geographical phone numbers, for non italian phone numbers a monthly fee is applied.
+
 This repository bulds a new docker image based on Freeswitch over a regular Debian 7 image.
-Freeswitch was built following the instructions reported in this book : <a href=http://www.youcanprint.it/youcanprint-libreria/saggistica/costruire-centralini-telefonici-con-freeswitch.html>http://www.youcanprint.it/youcanprint-libreria/saggistica/costruire-centralini-telefonici-con-freeswitch.html</a>.
+
+Freeswitch was built following the instructions reported in this book :
+[Amazon Link](http://www.amazon.it/Costruire-centralini-telefonici-con-FreeSWITCH/dp/8891173096/ref=sr_1_1?ie=UTF8&qid=1439468932&sr=8-1&keywords=freeswitch)
 
 Instructions
 ------------
@@ -37,10 +42,12 @@ num2:
 ```
 
 On this 2 examples an HTTP request to 192.168.1.1 is triggered everytime a whitelisted caller calls sipaccount1 and to 192.168.1.2 whenever sipaccount2 is called.
-Clouditalia offers free sip accounts related to geographical phone numbers (mostly italian) at <a href="www.clouditaliaorchestra.com">www.clouditaliaorchestra.com</a>.
+
 After a call has been received a busy signal is sent back to the caller so you won't be charged from your telco company.
-I use this process for home automation purposes, the most common possible situation is a raspberry pi connected to some appliance that triggers his GPIOs for every incoming HTTP request.
-ClouditaliaCall2HTTPConverter extens this feature so you can control your home appliances directly from your cellphone with a simple voicecall.
+I use this process for home automation purposes: the most common scenario is a raspberry pi connected to some appliance by his GPIO.
+Using a simple http server on the raspberry you can control its GPIO (therefore your home appliances) directly from your cellphone just making a simple voicecall.
+
+No smartphones are required, no dataplan is required.
 
 SIP Ports
 ------------
